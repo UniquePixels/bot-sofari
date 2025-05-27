@@ -1,0 +1,24 @@
+{
+	"version": "0.2",
+	"useGitignore": true,
+	"words": [
+		"commitlint",
+		"markdownlint",
+		"Spark⚡️Bot",
+		"sparkbot",
+		"SparkBot",
+		"valibot",
+		"cooldown",
+		"cooldowns",
+		"pino",
+		"luxon",
+		"yossele",
+		"axiomhq",
+		"unyeshiva",
+		"modmail",
+		"madrichim",
+		"invitable",
+		"inbounder"
+	],
+	"flagWords": []
+}

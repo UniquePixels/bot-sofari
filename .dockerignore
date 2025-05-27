@@ -1,0 +1,12 @@
+.github
+.vscode
+.git
+.commitlintrc
+.cspell.json
+.dockerignore
+.editorconfig
+.gitignore
+.markdownlint-cli2.jsonc
+.prettierrc
+.xo-config
+LICENSE
