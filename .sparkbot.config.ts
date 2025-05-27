@@ -1,48 +1,48 @@
-import { ActivityType, GatewayIntentBits } from "discord.js";
+import { ActivityType } from 'discord.js';
 import type {
 	SecretsVaultPluginConfig,
 	SparkBotConfig,
-} from "./core/configuration";
+} from './core/configuration';
 
 export const secretsVaultPluginConfig: SecretsVaultPluginConfig = {
-	module: "@sparkbot/plugin-secrets",
+	module: '@sparkbot/plugin-secrets',
 };
 
 export const appConfig: SparkBotConfig = {
-	discordAPIKey: { secretVaultKey: "discordAPIKey" },
-	discordAppID: "1376252581256626187",
+	discordAPIKey: { secretVaultKey: 'discordAPIKey' },
+	discordAppID: '1376252581256626187',
 	discordIntents: [],
 	enabledPartials: [],
 	defaultPresence: {
-		status: "online",
+		status: 'online',
 		activities: [
-			{ type: ActivityType.Listening, name: "to the words of Torah" },
+			{ type: ActivityType.Listening, name: 'to the words of Torah' },
 		],
 	},
 	loggingLibraryPlugin: {
 		prod: {
-			module: "@sparkbot/plugin-logger",
+			module: '@sparkbot/plugin-logger',
 			options: {
-				loggingLevel: "info",
+				loggingLevel: 'info',
 				transports: [
 					{
-						target: "@axiomhq/pino",
+						target: '@axiomhq/pino',
 						options: {
-							dataset: "app-logs-pix",
-							token: { secretVaultKey: "axiomAPIToken" },
+							dataset: 'app-logs-pix',
+							token: { secretVaultKey: 'axiomAPIToken' },
 						},
-						level: "info",
+						level: 'info',
 					},
 				],
 			},
 		},
 		dev: {
-			module: "@sparkbot/plugin-logger",
+			module: '@sparkbot/plugin-logger',
 			options: {
-				loggingLevel: "debug",
+				loggingLevel: 'debug',
 				transports: [
 					{
-						target: "pino-pretty",
+						target: 'pino-pretty',
 						options: {
 							colorize: true,
 						},
