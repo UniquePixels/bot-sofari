@@ -1,13 +1,13 @@
 {
-	"name": "bot-yossele",
-	"description": "Server management bot for Judaism Unbound",
+	"name": "bot-sofari",
+	"description": "A Discord bot that helps you find and learn about Jewish texts.",
 	"version": "0.0.1",
 	"license": "UNLICENSED",
 	"author": "Brian Lister <brian@uniquepixels.xyz> (http://uniquepixels.xyz/)",
 	"contributors": [],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/unique-pixels/bot-yossele.git"
+		"url": "https://github.com/unique-pixels/bot-sofari.git"
 	},
 	"type": "module",
 	"engines": {
@@ -32,6 +32,7 @@
 		"typescript": "5.8.3"
 	},
 	"dependencies": {
+		"@api/sefaria": "file:.api/apis/sefaria",
 		"@axiomhq/pino": "^1.3.1",
 		"@discordjs/core": "^2.1.0",
 		"@hypercliq/shutdown-cleanup": "^7.0.1",

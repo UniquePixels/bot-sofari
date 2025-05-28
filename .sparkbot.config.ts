@@ -28,7 +28,7 @@ export const appConfig: SparkBotConfig = {
 					{
 						target: '@axiomhq/pino',
 						options: {
-							dataset: 'app-logs-pix',
+							dataset: 'app-logs-sofari',
 							token: { secretVaultKey: 'axiomAPIToken' },
 						},
 						level: 'info',
