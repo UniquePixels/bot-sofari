@@ -36,7 +36,7 @@ export class Help extends CommandSpark {
 				new MediaGalleryItemBuilder().setURL('attachment://banner.png'),
 			),
 			new TextDisplayBuilder().setContent(
-				'Sofari provides an interface to the [Sefaria](https://sefaria.org) library of Jewish texts, making it easy to post the original text, translations, and commentaries.',
+				'Sofari provides an interface to the [Sefaria](https://sefaria.org) library of Jewish texts, making it easy to post the original texts, translations, and commentaries in Discord chats and DMs.',
 			),
 			new ContainerBuilder().addTextDisplayComponents(
 				new TextDisplayBuilder().setContent(
@@ -47,13 +47,10 @@ export class Help extends CommandSpark {
 				.setSpacing(SeparatorSpacingSize.Small)
 				.setDivider(true),
 			new TextDisplayBuilder().setContent(
-				"If you need help or want to suggest a new feature, please join <@1123411105289601115>'s [development server](https://discord.gg/Dk8P8h3e9u).",
+				'If you need help or want to suggest a new feature, please join the [development server](https://discord.gg/Dk8P8h3e9u).',
 			),
 			new TextDisplayBuilder().setContent(
-				'I maintain and host this application as a hobby of :two_hearts: for the Jewish Discord community.  If you appreciate it and want to do so, you can [tip me](https://lnk.bio/uniquepixels).',
-			),
-			new MediaGalleryBuilder().addItems(
-				new MediaGalleryItemBuilder().setURL('attachment://powered.png'),
+				'This project is maintained and hosted as a hobby of :two_hearts: for the Jewish Discord community, by <@1123411105289601115>.  There are no fees or premiums to use it. If you want to show your appreciation, consider [buying them a coffee](https://lnk.bio/uniquepixels).',
 			),
 		];
 
@@ -72,10 +69,6 @@ export class Help extends CommandSpark {
 					{
 						attachment: join(import.meta.dirname, './assets/banner.png'),
 						name: 'banner.png',
-					},
-					{
-						attachment: join(import.meta.dirname, './assets/powered.png'),
-						name: 'powered.png',
 					},
 				],
 				flags: messageFlags,
