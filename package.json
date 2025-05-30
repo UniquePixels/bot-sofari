@@ -19,7 +19,7 @@
 		"lint:format": "biome format --write",
 		"lint:ci": "biome ci --reporter=github",
 		"lint:code": "biome check",
-		"lint:markdown": "markdownlint-cli2 '**/*.md' '#node_modules'",
+		"lint:markdown": "markdownlint-cli2 '**/*.md' '#node_modules' '#.api'",
 		"lint:tsc": "tsc --noEmit --skipLibCheck"
 	},
 	"devDependencies": {

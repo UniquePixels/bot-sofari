@@ -10,7 +10,7 @@ export const secretsVaultPluginConfig: SecretsVaultPluginConfig = {
 
 export const appConfig: SparkBotConfig = {
 	discordAPIKey: { secretVaultKey: 'discordAPIKey' },
-	discordAppID: '1376252581256626187',
+	discordAppID: { prod: '1376252581256626187', dev: '1225958405542383747' },
 	discordIntents: [],
 	enabledPartials: [],
 	defaultPresence: {
