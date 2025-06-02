@@ -10,10 +10,8 @@ import { CommandSpark } from '../core/sparks';
 
 const cmd = new SlashCommandBuilder();
 cmd
-	.setName('source')
-	.setDescription(
-		'Posts the source text (usually Hebrew) for a given reference.',
-	)
+	.setName('english')
+	.setDescription('Post the primary english translation for a given reference.')
 	.addStringOption((option) =>
 		option
 			.setName('reference')
@@ -21,7 +19,7 @@ cmd
 			.setRequired(true),
 	);
 
-export class Source extends CommandSpark {
+export class English extends CommandSpark {
 	id = cmd.name;
 	command = cmd;
 	gates = {};
@@ -38,7 +36,7 @@ export class Source extends CommandSpark {
 		sefaria
 			.getV3Texts({
 				tref: reference,
-				version: 'source',
+				version: 'english',
 				return_format: 'text_only',
 			})
 			.then((response) => {
@@ -51,7 +49,7 @@ export class Source extends CommandSpark {
 				} else {
 					try {
 						interaction.followUp({
-							content: `No source text found for ${reference}.`,
+							content: `No english text found for ${reference}.`,
 						});
 						return;
 					} catch {
@@ -93,7 +91,7 @@ export class Source extends CommandSpark {
 			.catch(() => {
 				try {
 					interaction.followUp({
-						content: `No source text found for ${reference}.`,
+						content: `No english text found for ${reference}.`,
 					});
 					return;
 				} catch {

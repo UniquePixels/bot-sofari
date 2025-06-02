@@ -1,4 +1,5 @@
 import { join } from 'node:path';
+import dedent from 'dedent';
 import {
 	type ChatInputCommandInteraction,
 	ContainerBuilder,
@@ -15,7 +16,7 @@ import { CommandSpark } from '../../core/sparks';
 const cmd = new SlashCommandBuilder();
 cmd
 	.setName('help')
-	.setDescription('Get help with using Sofari')
+	.setDescription('Get help and a list of commands for Sofari')
 	.addBooleanOption((option) =>
 		option
 			.setName('public')
@@ -40,14 +41,25 @@ export class Help extends CommandSpark {
 			),
 			new ContainerBuilder().addTextDisplayComponents(
 				new TextDisplayBuilder().setContent(
-					'## Commands:\n- </source:1377812073710620754> *reference* - Posts the source text of the given reference.\n\n- </help:1377812073710620756> - Displays this help message\n\n-# Note: Any text over 3500 characters will be automatically truncated.',
+					dedent`## Commands:
+								- </source:1377812073710620754> *reference* - Posts the source text of the given reference.
+								- </english:1379201513980952708> *reference* - Posts the primary English translation of the given reference.
+								- </help:1377812073710620756> - Displays this help message`,
+				),
+			),
+			new ContainerBuilder().addTextDisplayComponents(
+				new TextDisplayBuilder().setContent(
+					dedent`### Notes:
+								- *reference* can be any valid Sefaria reference, such as "Genesis 1:1", "Exodus 20:13-21", or "Talmud Berakhot 2a".
+								- Any text over 3500 characters will be automatically truncated.
+								- **These commands will change in the future!** This is a work in progress, and more commands will be added soon.`,
 				),
 			),
 			new SeparatorBuilder()
 				.setSpacing(SeparatorSpacingSize.Small)
 				.setDivider(true),
 			new TextDisplayBuilder().setContent(
-				'If you need help or want to suggest a new feature, please join the [development server](https://discord.gg/Dk8P8h3e9u).',
+				'Please join the [development server](https://discord.gg/Dk8P8h3e9u) for help or to submit a feature request.',
 			),
 			new TextDisplayBuilder().setContent(
 				'This project is maintained and hosted as a hobby of :two_hearts: for the Jewish Discord community, by <@1123411105289601115>.  There are no fees or premiums to use it. If you want to show your appreciation, consider [buying them a coffee](https://lnk.bio/uniquepixels).',
