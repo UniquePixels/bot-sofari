@@ -13,7 +13,8 @@
 		"pino",
 		"luxon",
 		"sefaria",
-		"sofari"
+		"sofari",
+		"neverthrow"
 	],
 	"flagWords": []
 }
